@@ -1,0 +1,150 @@
+[04.08. 학습일정]
+1. JS 객체
+ - 유효성 검사
+ - 엔터 이벤트
+2. 실습
+ - 레이아웃, JS, jQuery를
+   사용하여 구현된
+   메인페이지
+3. 상담
+
+
+-------------------------------
+
+데이트(Date) 객체 =>
+var 변수명 = new Date( );
+                  -------------
+                  Date객체 생성
+---------------
+생성된 Date객체를
+var 변수명으로 만들어진
+변수를 사용하여 객체를 
+사용한다.(=참조한다)
+
+변수가 객체를 사용한다.
+= 변수를 사용하여
+   객체가 갖고 있는
+   메서드와 속성을 사용한다.
+var now = new Date( );
+               --------------
+  now +  .  +  getFullYear( )
+  변수명 + 마침표 + A
+   =>  now.getFullYear( );
+
+
+A => 객체가 제공하는 정보
+        또는 데이터를 표현하는
+        메서드( 또는 속성도 
+         가능함)
+
+------------------------------
+
+JS의 객체
+
+Date( )             document
+window( )
+location( )
+string( )
+navigator( )
+screen( )
+Math( )
+....
+RegExp   Regular Expression
+             정규      표현
+=> 입력한 값이
+     지정된 규칙에 부합하느냐?
+     부합여부에 따라서
+      true, false 를 반환한다.
+
+
+
+일반적인 변수(=> 문자 저장)
+var str = "가나다";
+alert(str);  // 가나다
+
+정규표현식 객체
+var reg = /Javascript/;
+여기서 reg는 객체변수
+alert( reg.test("Javascript") );
+=> true가 출력됨
+alert( reg.test("avascript") );
+=> false가 출력됨
+
+var now = new Date( );
+alert(now.getDate( ));
+  // 8 이 출력됨 
+
+
+[정규표현식 실습]
+폴더명 =>
+D:\webPub_1201\kjj\silsp\js\silsp_RegExp
+html파일명 => regExp.html
+css => 내부 CSS
+js => script/script.js
+jQuery Lib => CDN
+
+
+[정규표현식 사용법 정리]
+1. 정규표현식의 객체 생성
+  1) var 변수명 =   / /;
+            기호 "/" 떨어트려  표기함.
+            붙여서 사용하면 주석임.
+
+   var 변수명 = new Date( );  
+                   // Date 객체
+   2) var 변수명 = new RegExp( );
+                   // RegExp
+
+2. 객체의 매개변수에 
+   비교할 기준이 되는 문자 또는
+   일정한 규칙(= 패턴)을 기재함   
+
+   var reg = new RegExp("롯데리아");                  ---                           ----------
+     객체 변수명                  기준 내용
+                                        = 패턴, 규칙
+
+3. 패턴과 비교할 데이터 또는 변수를 생성
+   var chkData = "쉐이크쉑버거";
+        일반변수
+
+4. 기준 내용과 비교할 데이터를
+    정규표현식 객체의 test( ) 메서드를 
+    사용하여 비교함. 비교결과는
+    데이터가 일치할 경우 true, 
+    일치하지 않을 경우 false 가 반환된다.
+    => reg      .     test (     chkData      );
+       -------                      ---------
+      객체변수                 패턴과 비교할
+    (이 변수에는              데이터 또는 문자
+     기준 문자 패턴이
+     설정되어 있음,
+      현재는 "롯데리아")
+
+
+
+
+
+
+    var regExp = /쉐이크쉑버거/;   // 기준 내용 = 패턴
+    
+    var chkData = "쉐이크쉑버거";   // 일반변수
+                                                // 비교할 내용
+    
+    var res = regExp.test(chkData);
+    //   기준내용을저장한변수.test(비교할내용);
+
+    
+//    alert("res : " + res);
+    
+
+
+
+
+
+
+
+
+
+
+
+   
